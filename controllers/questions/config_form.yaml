@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Question
+
+# Model Form Field configuration
+form: $/studioazura/faq/models/question/fields.yaml
+
+# Model Class name
+modelClass: Studioazura\FAQ\Models\Question
+
+# Default redirect location
+defaultRedirect: studioazura/faq/questions
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: studioazura/faq/questions/update/:id
+    redirectClose: studioazura/questions/faqs
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: studioazura/faq/questions
+    redirectClose: studioazura/faq/questions
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

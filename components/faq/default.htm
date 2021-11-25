@@ -1,0 +1,30 @@
+<div class="d-flex flex-column justify-content-center">
+  <h2 class="mb-8">Frequently asked questions</h2>
+  <ul class="faq">
+  {% for faq in questions %}
+    <li class="faq-item">
+      <h3 class="faq-item-title">{{ faq.question }}</h3> 
+      <div class="faq-item-answer xhidden">{{ faq.answer|md }}</div> 
+    </li>
+  {% endfor %}
+  </ul>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+  {% for faq in questions %}
+    {
+      "@type": "Question",
+      "name": "{{ faq.question }}",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "<p>{{ faq.answer }}</p>"
+      }
+    }{{ loop.last ? '' : ',' }}
+  {% endfor ~%}
+  ]
+}
+</script>

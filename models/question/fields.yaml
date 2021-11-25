@@ -1,0 +1,13 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: ID
+        disabled: true
+    question:
+        label: Question
+    answer:
+        label: Answer
+        type: textarea

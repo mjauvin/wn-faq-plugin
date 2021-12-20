@@ -43,11 +43,6 @@ class Plugin extends PluginBase
 
     }
 
-    /**
-     * Registers any front-end components implemented in this plugin.
-     *
-     * @return array
-     */
     public function registerComponents()
     {
         return [
@@ -55,11 +50,16 @@ class Plugin extends PluginBase
         ];
     }
 
-    /**
-     * Registers back-end navigation items for this plugin.
-     *
-     * @return array
-     */
+    public function registerPermissions()
+    {
+        return [
+            'studioazura.faq.manage_questions' => [
+                'label' => 'Manage FAQ Questions',
+                'tab' => 'Azura',
+            ],
+        ];
+    }
+
     public function registerNavigation()
     {
         return [
@@ -67,6 +67,7 @@ class Plugin extends PluginBase
                 'label'       => 'FAQs',
                 'icon'        => 'icon-question-circle',
                 'url'         => Backend::url('studioazura/faq/questions'),
+                'permissions' => ['studioazura.faq.manage_questions'],
             ]
         ];
     }

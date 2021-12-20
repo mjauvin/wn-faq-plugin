@@ -63,7 +63,7 @@ class Plugin extends PluginBase
     public function registerNavigation()
     {
         return [
-            'FAQs' => [
+            'faq' => [
                 'label'       => 'FAQs',
                 'icon'        => 'icon-question-circle',
                 'url'         => Backend::url('studioazura/faq/questions'),

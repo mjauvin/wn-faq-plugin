@@ -56,6 +56,7 @@ class Plugin extends PluginBase
             'studioazura.faq.manage_questions' => [
                 'label' => 'Manage FAQ Questions',
                 'tab' => 'Azura',
+                'roles' => ['developer'],
             ],
         ];
     }

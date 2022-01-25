@@ -16,6 +16,8 @@ class Questions extends Controller
         'Backend.Behaviors.ListController'
     ];
 
+    public $requiredPermissions = ['studioazura.faq.manage_questions'];
+
     /**
      * @var string Configuration file for the `FormController` behavior.
      */

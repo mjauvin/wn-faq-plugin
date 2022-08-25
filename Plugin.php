@@ -58,6 +58,11 @@ class Plugin extends PluginBase
                 'tab' => 'Azura',
                 'roles' => ['developer'],
             ],
+            'studioazura.faq.manage_categories' => [
+                'label' => 'Manage FAQ Categories',
+                'tab' => 'Azura',
+                'roles' => ['developer'],
+            ],
         ];
     }
 
@@ -69,6 +74,21 @@ class Plugin extends PluginBase
                 'icon'        => 'icon-question-circle',
                 'url'         => Backend::url('studioazura/faq/questions'),
                 'permissions' => ['studioazura.faq.manage_questions'],
+
+                'sideMenu' => [
+                    'faq-questions' => [
+                        'label' => 'studioazura.faq::lang.questions.label',
+                        'url' => Backend::url('studioazura/faq/questions'),
+                        'icon' => trans('studioazura.faq::lang.questions.icon'),
+                        'permissions' => ['studioazura.faq.manage_questions'],
+                    ],
+                    'faq-categories' => [
+                        'label' => 'studioazura.faq::lang.categories.label',
+                        'url' => Backend::url('studioazura/faq/categories'),
+                        'icon' => trans('studioazura.faq::lang.categories.icon'),
+                        'permissions' => ['studioazura.faq.manage_categories'],
+                    ],
+                ],
             ]
         ];
     }

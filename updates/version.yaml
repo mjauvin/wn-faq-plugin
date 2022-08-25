@@ -1,3 +1,6 @@
 1.0.1:
   - First version of FAQ
   - create_questions_table.php
+1.0.2:
+  - Add categories
+  - create_categories_table.php

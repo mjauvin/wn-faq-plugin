@@ -3,9 +3,10 @@
 # ===================================
 
 fields:
-    id:
-        label: ID
-        disabled: true
+    category:
+        label: Category
+        type: relation
+        span: left
     question:
         label: Question
     answer:

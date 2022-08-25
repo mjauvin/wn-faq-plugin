@@ -1,0 +1,17 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+    id:
+        label: 'studioazura.faq::lang.models.general.id'
+        disabled: true
+    name:
+        label: Name
+        required: true
+        span: auto
+    image:
+        label: Image
+        type: fileupload
+        mode: image
+        span: auto

@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: 'studioazura.faq::lang.models.category.label'
+
+# Model Form Field configuration
+form: $/studioazura/faq/models/category/fields.yaml
+
+# Model Class name
+modelClass: StudioAzura\FAQ\Models\Category
+
+# Default redirect location
+defaultRedirect: studioazura/faq/categories
+
+# Create page
+create:
+    title: backend::lang.form.create_title
+    redirect: studioazura/faq/categories/update/:id
+    redirectClose: studioazura/faq/categories
+
+# Update page
+update:
+    title: backend::lang.form.update_title
+    redirect: studioazura/faq/categories
+    redirectClose: studioazura/faq/categories
+
+# Preview page
+preview:
+    title: backend::lang.form.preview_title

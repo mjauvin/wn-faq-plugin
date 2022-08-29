@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('studioazura/faq/questions') ?>">FAQs</a></li>
+        <li><a href="<?= Backend::url('studioazura/faq/faqs') ?>">F A Qs</a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -20,28 +20,28 @@
                     data-request="onSave"
                     data-request-data="redirect:0"
                     data-hotkey="ctrl+s, cmd+s"
-                    data-load-indicator="Saving Faq..."
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving_name', ['name' => trans('studioazura.faq::lang.models.faq.label')])); ?>"
                     class="btn btn-primary">
-                    <u>S</u>ave
+                    <?= e(trans('backend::lang.form.save')); ?>
                 </button>
                 <button
                     type="button"
                     data-request="onSave"
                     data-request-data="close:1"
                     data-hotkey="ctrl+enter, cmd+enter"
-                    data-load-indicator="Saving Faq..."
+                    data-load-indicator="<?= e(trans('backend::lang.form.saving_name', ['name' => trans('studioazura.faq::lang.models.faq.label')])); ?>"
                     class="btn btn-default">
-                    Save and Close
+                    <?= e(trans('backend::lang.form.save_and_close')); ?>
                 </button>
                 <button
                     type="button"
-                    class="oc-icon-trash-o btn-icon danger pull-right"
+                    class="wn-icon-trash-o btn-icon danger pull-right"
                     data-request="onDelete"
-                    data-load-indicator="Deleting Faq..."
-                    data-request-confirm="Delete this faq?">
+                    data-load-indicator="<?= e(trans('backend::lang.form.deleting_name', ['name' => trans('studioazura.faq::lang.models.faq.label')])); ?>"
+                    data-request-confirm="<?= e(trans('backend::lang.form.confirm_delete')); ?>">
                 </button>
                 <span class="btn-text">
-                    or <a href="<?= Backend::url('studioazura/faq/questions') ?>">Cancel</a>
+                    or <a href="<?= Backend::url('studioazura/faq/faqs') ?>"><?= e(trans('backend::lang.form.cancel')); ?></a>
                 </span>
             </div>
         </div>
@@ -51,6 +51,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('studioazura/faq/questions') ?>" class="btn btn-default">Return to FAQs list</a></p>
+    <p><a href="<?= Backend::url('studioazura/faq/faqs') ?>" class="btn btn-default"><?= e(trans('backend::lang.form.return_to_list')); ?></a></p>
 
 <?php endif ?>

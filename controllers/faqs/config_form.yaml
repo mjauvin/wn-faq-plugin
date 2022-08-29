@@ -3,28 +3,28 @@
 # ===================================
 
 # Record name
-name: Question
+name: 'studioazura.faq::lang.models.faq.label'
 
 # Model Form Field configuration
-form: $/studioazura/faq/models/question/fields.yaml
+form: $/studioazura/faq/models/faq/fields.yaml
 
 # Model Class name
-modelClass: Studioazura\FAQ\Models\Question
+modelClass: StudioAzura\FAQ\Models\FAQ
 
 # Default redirect location
-defaultRedirect: studioazura/faq/questions
+defaultRedirect: studioazura/faq/faqs
 
 # Create page
 create:
     title: backend::lang.form.create_title
-    redirect: studioazura/faq/questions/update/:id
-    redirectClose: studioazura/questions/faqs
+    redirect: studioazura/faq/faqs/update/:id
+    redirectClose: studioazura/faq/faqs
 
 # Update page
 update:
     title: backend::lang.form.update_title
-    redirect: studioazura/faq/questions
-    redirectClose: studioazura/faq/questions
+    redirect: studioazura/faq/faqs
+    redirectClose: studioazura/faq/faqs
 
 # Preview page
 preview:

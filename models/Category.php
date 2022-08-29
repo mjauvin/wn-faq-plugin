@@ -8,7 +8,7 @@ use Model;
 class Category extends Model
 {
     public $implement = [
-        \Winter\Translate\Behaviors\TranslatableModel::class,
+        '@Winter.Translate.Behaviors.TranslatableModel',
     ];
 
     use \Winter\Storm\Database\Traits\Validation;
@@ -17,6 +17,7 @@ class Category extends Model
 
     public $translatable = [
         'image',
+        'name',
     ];
 
     public $rules = [];

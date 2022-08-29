@@ -2,5 +2,8 @@
   - First version of FAQ
   - create_questions_table.php
 1.0.2:
-  - Add categories
+  - Add FAQ model/controller
+  - Add Categories
+  - create_faqs_table.php
   - create_categories_table.php
+  - questions_add_foreignkeys.php

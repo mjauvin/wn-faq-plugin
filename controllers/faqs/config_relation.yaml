@@ -1,0 +1,8 @@
+questions:
+    label: Questions
+    manage:
+        form: $/studioazura/faq/models/question/fields.yaml
+        list: $/studioazura/faq/models/question/columns.yaml
+    view:
+        list: $/studioazura/faq/models/question/columns.yaml
+        toolbarButtons: create|delete

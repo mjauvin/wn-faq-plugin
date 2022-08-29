@@ -1,6 +1,6 @@
 <?php Block::put('breadcrumb') ?>
     <ul>
-        <li><a href="<?= Backend::url('studioazura/faq/questions') ?>">FAQs</a></li>
+        <li><a href="<?= Backend::url('studioazura/faq/faqs') ?>"><?= e(trans('studioazura.faq::lang.models.faq.label_plural')); ?></a></li>
         <li><?= e($this->pageTitle) ?></li>
     </ul>
 <?php Block::endPut() ?>
@@ -14,6 +14,6 @@
 <?php else: ?>
 
     <p class="flash-message static error"><?= e($this->fatalError) ?></p>
-    <p><a href="<?= Backend::url('studioazura/faq/questions') ?>" class="btn btn-default">Return to FAQs list</a></p>
+    <p><a href="<?= Backend::url('studioazura/faq/faqs') ?>" class="btn btn-default"><?= e(trans('backend::lang.form.return_to_list')); ?></a></p>
 
 <?php endif ?>

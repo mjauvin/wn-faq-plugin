@@ -11,6 +11,10 @@ return [
             'label' => 'Category',
             'label_plural' => 'Categories',
         ],
+        'faq' => [
+            'label' => 'F A Q',
+            'label_plural' => 'F A Qs',
+        ],
     ],
     'categories' => [
         'label' => 'FAQ categories',

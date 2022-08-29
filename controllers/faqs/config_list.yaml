@@ -3,16 +3,16 @@
 # ===================================
 
 # Model List Column configuration
-list: $/studioazura/faq/models/question/columns.yaml
+list: $/studioazura/faq/models/faq/columns.yaml
 
 # Model Class name
-modelClass: Studioazura\FAQ\Models\Question
+modelClass: StudioAzura\FAQ\Models\FAQ
 
 # List Title
-title: Manage FAQs
+title: 'studioazura.faq::lang.models.faq.label_plural'
 
 # Link URL for each record
-recordUrl: studioazura/faq/questions/update/:id
+recordUrl: studioazura/faq/faqs/update/:id
 
 # Message to display if the list is empty
 noRecordsMessage: backend::lang.list.no_records

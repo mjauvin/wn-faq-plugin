@@ -6,6 +6,7 @@ fields:
     category:
         label: Category
         type: relation
+        emptyOption: -- select category --
         span: left
     question:
         label: Question

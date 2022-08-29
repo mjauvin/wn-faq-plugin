@@ -53,7 +53,7 @@ class Plugin extends PluginBase
     public function registerPermissions()
     {
         return [
-            'studioazura.faq.manage_questions' => [
+            'studioazura.faq.manage_faqs' => [
                 'label' => 'Manage FAQ Questions',
                 'tab' => 'Azura',
                 'roles' => ['developer'],
@@ -73,14 +73,14 @@ class Plugin extends PluginBase
                 'label'       => 'FAQs',
                 'icon'        => 'icon-question-circle',
                 'url'         => Backend::url('studioazura/faq/questions'),
-                'permissions' => ['studioazura.faq.manage_questions'],
+                'permissions' => ['studioazura.faq.manage_faqs'],
 
                 'sideMenu' => [
-                    'faq-questions' => [
-                        'label' => 'studioazura.faq::lang.questions.label',
-                        'url' => Backend::url('studioazura/faq/questions'),
+                    'faqs' => [
+                        'label' => 'FAQs',
+                        'url' => Backend::url('studioazura/faq/faqs'),
                         'icon' => trans('studioazura.faq::lang.questions.icon'),
-                        'permissions' => ['studioazura.faq.manage_questions'],
+                        'permissions' => ['studioazura.faq.manage_faqs'],
                     ],
                     'faq-categories' => [
                         'label' => 'studioazura.faq::lang.categories.label',

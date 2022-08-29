@@ -11,6 +11,13 @@ class Question extends Model
 
     public $table = 'studioazura_faq_questions';
 
+    public $implement = ['@Winter.Translate.Behaviors.TranslatableModel'];
+
+    public $translatable = [
+        'question',
+        'answer',
+    ];
+
     public $rules = [];
 
     protected $dates = [
@@ -20,6 +27,7 @@ class Question extends Model
 
     public $belongsTo = [
         'category' => Category::class,
+        'faq' => [FAQ::class, 'key' => 'faq_id'],
     ];
 
     public $attachOne = [

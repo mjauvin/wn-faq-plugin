@@ -13,3 +13,7 @@ fields:
     answer:
         label: Answer
         type: textarea
+    image:
+      label: Image
+      type: fileupload
+      mode: image

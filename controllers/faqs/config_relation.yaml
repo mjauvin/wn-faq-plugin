@@ -1,5 +1,14 @@
+categories:
+    label: Category
+    manage:
+        form: $/studioazura/faq/models/category/fields.yaml
+        list: $/studioazura/faq/models/category/columns.yaml
+    view:
+        list: $/studioazura/faq/models/category/columns.yaml
+        toolbarButtons: create|delete
+
 questions:
-    label: Questions
+    label: Question
     manage:
         form: $/studioazura/faq/models/question/fields.yaml
         list: $/studioazura/faq/models/question/columns.yaml

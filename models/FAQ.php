@@ -26,5 +26,6 @@ class FAQ extends Model
 
     public $hasMany = [
         'questions' => [Question::class, 'key' => 'faq_id', 'delete' => true],
+        'categories' => [Category::class, 'key' => 'faq_id', 'delete' => true],
     ];
 }

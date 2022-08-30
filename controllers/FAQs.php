@@ -23,4 +23,12 @@ class FAQs extends Controller
 
         BackendMenu::setContext('StudioAzura.FAQ', 'faq', 'faqs');
     }
+
+    public function relationExtendManageWidget($widget, $field, $model)
+    {
+        if ($field === 'questions') {
+            $options = $model->categories()->lists('name', 'id');
+            $widget->fields['category']['options'] = $options;
+        }
+    }
 }

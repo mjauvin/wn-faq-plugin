@@ -7,6 +7,12 @@ fields:
     label: Name
   description:
     label: Description
-  questions:
-    label: Questions
-    type: relationmanager
+tabs:
+  defaultTab: General
+  fields:
+    categories:
+      type: relationmanager
+      tab: Categories
+    questions@update:
+      type: relationmanager
+      tab: Questions

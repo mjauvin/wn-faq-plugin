@@ -11,6 +11,7 @@ class CreateCategoriesTable extends Migration
         Schema::create('studioazura_faq_categories', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->increments('id');
+            $table->unsignedinteger('faq_id')->nullable()->index();
             $table->string('name');
             $table->timestamps();
         });

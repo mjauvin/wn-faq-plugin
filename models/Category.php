@@ -31,6 +31,10 @@ class Category extends Model
         'questions' => Question::class,
     ];
 
+    public $belongsTo = [
+        'faq' => [FAQ::class, 'key' => 'faq_id'],
+    ];
+
     public $attachOne = [
         'image' => \System\Models\File::class,
     ];

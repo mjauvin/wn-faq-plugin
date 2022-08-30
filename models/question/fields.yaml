@@ -5,7 +5,7 @@
 fields:
     category:
         label: Category
-        type: relation
+        type: dropdown
         emptyOption: -- select category --
         span: left
     question:

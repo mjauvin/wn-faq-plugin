@@ -6,6 +6,9 @@ categories:
     view:
         list: $/studioazura/faq/models/category/columns.yaml
         toolbarButtons: create|delete
+        defaultSort:
+            column: sort_order
+            direction: asc
 
 questions:
     label: Question
@@ -15,3 +18,7 @@ questions:
     view:
         list: $/studioazura/faq/models/question/columns.yaml
         toolbarButtons: create|delete
+        defaultSort:
+            column: sort_order
+            direction: asc
+

@@ -5,6 +5,11 @@ use Model;
 class FAQ extends Model
 {
     use \Winter\Storm\Database\Traits\Validation;
+    use \Winter\Storm\Database\Traits\HasSortableRelations;
+
+    public $sortableRelations = [
+        'questions' => 'sort_order',
+    ];
 
     public $table = 'studioazura_faq_faqs';
 

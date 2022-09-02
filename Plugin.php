@@ -58,11 +58,6 @@ class Plugin extends PluginBase
                 'tab' => 'Azura',
                 'roles' => ['developer'],
             ],
-            'studioazura.faq.manage_categories' => [
-                'label' => 'Manage FAQ Categories',
-                'tab' => 'Azura',
-                'roles' => ['developer'],
-            ],
         ];
     }
 

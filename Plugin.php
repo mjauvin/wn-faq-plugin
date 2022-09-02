@@ -69,26 +69,11 @@ class Plugin extends PluginBase
     public function registerNavigation()
     {
         return [
-            'faq' => [
+            'faqs' => [
                 'label'       => 'FAQs',
                 'icon'        => 'icon-question-circle',
-                'url'         => Backend::url('studioazura/faq/questions'),
+                'url'         => Backend::url('studioazura/faq/faqs'),
                 'permissions' => ['studioazura.faq.manage_faqs'],
-
-                'sideMenu' => [
-                    'faqs' => [
-                        'label' => 'FAQs',
-                        'url' => Backend::url('studioazura/faq/faqs'),
-                        'icon' => trans('studioazura.faq::lang.questions.icon'),
-                        'permissions' => ['studioazura.faq.manage_faqs'],
-                    ],
-                    'faq-categories' => [
-                        'label' => 'studioazura.faq::lang.categories.label',
-                        'url' => Backend::url('studioazura/faq/categories'),
-                        'icon' => trans('studioazura.faq::lang.categories.icon'),
-                        'permissions' => ['studioazura.faq.manage_categories'],
-                    ],
-                ],
             ]
         ];
     }

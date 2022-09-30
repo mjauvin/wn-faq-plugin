@@ -1,0 +1,21 @@
+{
+    "name": "studioazura/wn-faq-plugin",
+    "type": "winter-plugin",
+    "description": "Multilang FAQ system for WinterCMS",
+    "homepage": "https://github.com/mjauvin/wn-faq-plugin",
+    "license": "MIT",
+    "authors": [
+	    {
+		    "name": "Marc Jauvin",
+		    "email": "marc.jauvin@gmail.com",
+		    "role": "Original Author"
+	    }
+    ],
+    "require": {
+	    "php": ">=7.4",
+	    "composer/installers": "~1.0"
+    },
+    "extra": {
+	    "installer-name": "faq"
+    }
+}

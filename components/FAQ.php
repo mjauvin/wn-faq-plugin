@@ -27,7 +27,6 @@ class FAQ extends ComponentBase
     public function onRun()
     {
         $this->addCss(['assets/scss/faq.scss']);
-        $this->addJs('assets/js/faq.js');
 
         $this->page['faq'] = FAQModel::whereSlug($this->property('code'))->first();
     }

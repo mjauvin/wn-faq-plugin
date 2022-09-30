@@ -25,12 +25,9 @@
 .faq-item {
   color: inherit;
   background: inherit;
-  &:hover, &.active {
+  &:hover {
     color: black;
     background: inherit;
-  }
-  &:not(.active) .faq-item-answer {
-    display: none;
   }
 }
 

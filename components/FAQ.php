@@ -20,6 +20,7 @@ class FAQ extends ComponentBase
                 'type' => 'dropdown',
                 'required' => true,
                 'emptyOption' => '-- select FAQ --',
+                'showExternalParam' => false,
             ],
         ];
     }

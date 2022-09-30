@@ -12,4 +12,5 @@
   - add_sort_order.php
 1.0.4:
   - Add FAQ component
+  - Add slug to FAQ model
   - faqs_add_slug.php

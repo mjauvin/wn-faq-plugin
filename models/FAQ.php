@@ -22,6 +22,7 @@ class FAQ extends Model
 
     public $rules = [
         'name' => 'required',
+        'slug' => ['required', 'regex:/^[a-z0-9\/\:_\-\*\[\]\+\?\|]*$/i', 'unique'],
     ];
 
     protected $dates = [

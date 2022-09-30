@@ -1,10 +1,10 @@
-<div class="d-flex flex-column justify-content-center">
-  <h2 class="mb-8">Frequently asked questions</h2>
-  <ul class="faq">
-  {% for faq in questions %}
+<div class="faq">
+  <h2 class="faq-title">Frequently asked questions</h2>
+  <ul class="faq-items">
+  {% for item in faq.questions %}
     <li class="faq-item">
-      <h3 class="faq-item-title">{{ faq.question }}</h3> 
-      <div class="faq-item-answer xhidden">{{ faq.answer|md }}</div> 
+      <h3 class="faq-item-question">{{ item.question }}</h3> 
+      <div class="faq-item-answer">{{ item.answer | md }}</div> 
     </li>
   {% endfor %}
   </ul>
@@ -15,13 +15,13 @@
   "@context": "https://schema.org",
   "@type": "FAQPage",
   "mainEntity": [
-  {% for faq in questions %}
+  {% for item in faq.questions %}
     {
       "@type": "Question",
-      "name": "{{ faq.question }}",
+      "name": "{{ item.question }}",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "<p>{{ faq.answer }}</p>"
+        "text": "<p>{{ item.answer }}</p>"
       }
     }{{ loop.last ? '' : ',' }}
   {% endfor ~%}

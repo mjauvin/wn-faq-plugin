@@ -1,6 +1,6 @@
 # StudioAzura FAQ
 
-Frequently Asked Questions (FAQs). Supports Multiple FAQ, each with their own Categories and Question.
+Frequently Asked Questions (FAQs). Supports Multiple FAQ, each with their own Categories and Questions.
 
 ## Installation
 
@@ -10,5 +10,4 @@ This plugin is available for installation via [Composer](http://getcomposer.org/
 composer require studioazura/wn-faq-plugin
 ```
 
-No configuration is necessary.
-
+Just add the FAQ component to any page.

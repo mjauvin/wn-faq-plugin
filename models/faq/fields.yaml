@@ -5,6 +5,11 @@
 fields:
   name:
     label: Name
+    span: left
+  slug:
+    label: Slug
+    preset: name
+    span: auto
   description:
     label: Description
 tabs:

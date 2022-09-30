@@ -10,3 +10,6 @@
 1.0.3:
   - Add sort_order column to categories/questions table
   - add_sort_order.php
+1.0.4:
+  - Add FAQ component
+  - faqs_add_slug.php

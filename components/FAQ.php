@@ -1,6 +1,7 @@
 <?php namespace StudioAzura\FAQ\Components;
 
 use Cms\Classes\ComponentBase;
+use StudioAzura\FAQ\Models\FAQ as FAQModel;
 
 class FAQ extends ComponentBase
 {
@@ -14,13 +15,25 @@ class FAQ extends ComponentBase
 
     public function defineProperties()
     {
-        return [];
+        return [
+            'code' => [
+                'type' => 'dropdown',
+                'required' => true,
+                'emptyOption' => '-- select FAQ --',
+            ],
+        ];
     }
 
     public function onRun()
     {
         $this->addCss(['assets/scss/faq.scss']);
         $this->addJs('assets/js/faq.js');
-        $this->page['questions'] = \StudioAzura\FAQ\Models\Question::get();
+
+        $this->page['faq'] = FAQModel::whereSlug($this->property('code'))->first();
+    }
+
+    public function getCodeOptions()
+    {
+        return FAQModel::all()->lists('name', 'slug');
     }
 }

@@ -8,6 +8,7 @@ columns:
         searchable: true
     question:
         label: Question
+        searchable: true
     category[name]:
         label: Category
         type: text

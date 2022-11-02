@@ -7,6 +7,7 @@ columns:
         label: 'studioazura.faq::lang.models.general.id'
         searchable: true
     name:
+        searchable: true
     created_at:
         label: 'studioazura.faq::lang.models.general.created_at'
         type: datetime

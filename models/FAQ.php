@@ -18,6 +18,7 @@ class FAQ extends Model
     public $translatable = [
         'name',
         'description',
+        ['slug', 'index'=>true],
     ];
 
     public $rules = [

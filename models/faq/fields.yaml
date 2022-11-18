@@ -10,11 +10,13 @@ fields:
     label: Slug
     preset: name
     span: auto
-  description:
-    label: Description
 tabs:
   defaultTab: General
   fields:
+    description:
+      label: Description
+      type: markdown
+      size: huge
     categories:
       type: relationmanager
       tab: Categories

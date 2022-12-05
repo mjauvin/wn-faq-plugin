@@ -14,3 +14,6 @@
   - Add FAQ component
   - Add slug to FAQ model
   - faqs_add_slug.php
+1.0.5:
+  - change column for question to allow bigger content
+  - update_questions_table.php 

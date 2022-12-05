@@ -10,9 +10,10 @@ fields:
         span: left
     question:
         label: Question
+        type: markdown
     answer:
         label: Answer
-        type: textarea
+        type: markdown
     image:
       label: Image
       type: fileupload

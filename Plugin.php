@@ -40,10 +40,16 @@ class Plugin extends PluginBase
      */
     public function boot()
     {
-
     }
 
     public function registerComponents()
+    {
+        return [
+            'StudioAzura\FAQ\Components\FAQ' => 'FAQ',
+        ];
+    }
+
+    public function registerPageSnippets()
     {
         return [
             'StudioAzura\FAQ\Components\FAQ' => 'FAQ',

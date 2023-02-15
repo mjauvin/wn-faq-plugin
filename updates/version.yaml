@@ -17,3 +17,5 @@
 1.0.5:
   - change column for question to allow bigger content
   - update_questions_table.php 
+1.0.6:
+  - register FAQ component as Snippet

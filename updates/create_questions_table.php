@@ -13,7 +13,6 @@ class CreateQuestionsTable extends Migration
             $table->increments('id');
             $table->string('question');
             $table->mediumText('answer');
-            $table->unsignedinteger('sort_order')->nullable()->index();
             $table->timestamps();
         });
     }

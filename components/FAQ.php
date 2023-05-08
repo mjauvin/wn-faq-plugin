@@ -28,11 +28,14 @@ class FAQ extends ComponentBase
     public function onRun()
     {
         $this->addCss(['assets/scss/faq.scss']);
+    }
 
+    public function onRender()
+    {
         $this->page['faq'] = FAQModel::whereSlug($this->property('code'))->first();
     }
 
-    public function getCodeOptions()
+    public static function getCodeOptions()
     {
         return FAQModel::all()->lists('name', 'slug');
     }

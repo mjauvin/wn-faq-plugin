@@ -1,5 +1,9 @@
 <div class="faq">
-  <h2 class="faq-title">Frequently asked questions</h2>
+  <h2 class="faq-title">{{ faq.name }}</h2>
+  <div class="faq-description">
+      {{ faq.description | md }}
+  </div>
+{% if faq.categories | length >= 1 %}
   <div class="faq-categories">
   {% for category in faq.categories %}
     <details class="faq-category">
@@ -15,6 +19,14 @@
     </details>
   {% endfor %}
   </div>
+{% else %}
+  {% for item in faq.questions %}
+    <details class="faq-item">
+      <summary class="faq-item-question">{{ item.question }}</summary>
+      <div class="faq-item-answer">{{ item.answer | md }}</div>
+    </details>
+  {% endfor %}
+{% endif %}
 </div>
 
 <script type="application/ld+json">

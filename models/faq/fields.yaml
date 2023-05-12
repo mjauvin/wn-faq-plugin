@@ -13,6 +13,16 @@ fields:
 tabs:
   defaultTab: General
   fields:
+    title:
+      label: Title
+      type: text
+    subtitle:
+      label: Sub Title
+      type: text
+    excerpt:
+      label: Excerpt
+      type: markdown
+      size: small
     description:
       label: Description
       type: markdown

@@ -22,6 +22,10 @@ class FAQ extends ComponentBase
                 'emptyOption' => '-- select FAQ --',
                 'showExternalParam' => false,
             ],
+            'style' => [
+                'type' => 'text',
+                'showExternalParam' => false,
+            ],
         ];
     }
 

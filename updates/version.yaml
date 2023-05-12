@@ -19,3 +19,6 @@
   - update_questions_table.php 
 1.0.6:
   - register FAQ component as Snippet
+1.0.7:
+  - add title/subtitle/excerpt columns
+  - update_faqs_table.php

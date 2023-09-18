@@ -3,12 +3,23 @@
 # ===================================
 
 columns:
-    id:
-        label: ID
-        searchable: true
-    question:
-        label: Question
-        searchable: true
-    category[name]:
-        label: Category
-        type: text
+  id:
+    label: ID
+    invisible: true
+
+  sort_order:
+    invisible: true
+
+  sort_order_handle:
+    label: " "
+    type: partial
+    path: $/studioazura/foundation/partials/_reorder_handle.htm
+    width: 20px
+
+  question:
+    label: Question
+    searchable: true
+
+  category[name]:
+    label: Category
+    type: text

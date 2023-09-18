@@ -3,14 +3,10 @@
 use BackendMenu;
 use Backend\Classes\Controller;
 
-/**
- * F A Qs Backend Controller
- */
 class FAQs extends Controller
 {
-    /**
-     * @var array Behaviors that are implemented by this controller.
-     */
+    use \Studioazura\Foundation\Traits\ReorderRelation;
+
     public $implement = [
         \Backend\Behaviors\FormController::class,
         \Backend\Behaviors\ListController::class,
@@ -22,6 +18,10 @@ class FAQs extends Controller
         parent::__construct();
 
         BackendMenu::setContext('StudioAzura.FAQ', 'faq', 'faqs');
+
+        $this->addJs('/plugins/studioazura/foundation/assets/js/sortable.js');
+        $this->addJs('/plugins/studioazura/foundation/assets/js/backend.js');
+
     }
 
     public function relationExtendManageWidget($widget, $field, $model)

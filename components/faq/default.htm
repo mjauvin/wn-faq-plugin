@@ -12,7 +12,7 @@
       {% for item in category.questions %}
         <details class="faq-item">
           <summary class="faq-item-question">{{ item.question }}</summary>
-          <div class="faq-item-answer">{{ item.answer | md }}</div>
+          <div class="faq-item-answer">{{ item.answer | twig | md | parseSnippets }}</div>
         </details>
       {% endfor %}
       </div>
@@ -23,7 +23,7 @@
   {% for item in faq.questions %}
     <details class="faq-item">
       <summary class="faq-item-question">{{ item.question }}</summary>
-      <div class="faq-item-answer">{{ item.answer | md }}</div>
+      <div class="faq-item-answer">{{ item.answer | twig | md | parseSnippets }}</div>
     </details>
   {% endfor %}
 {% endif %}

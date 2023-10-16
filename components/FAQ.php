@@ -32,11 +32,12 @@ class FAQ extends ComponentBase
     public function onRun()
     {
         $this->addCss(['assets/scss/faq.scss']);
+        $this->page['faq'] = FAQModel::whereSlug($this->property('code'))->first();
     }
 
     public function onRender()
     {
-        $this->page['faq'] = FAQModel::whereSlug($this->property('code'))->first();
+        #$this->page['faq'] = FAQModel::whereSlug($this->property('code'))->first();
     }
 
     public static function getCodeOptions()

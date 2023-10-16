@@ -3,16 +3,8 @@
 use Backend;
 use System\Classes\PluginBase;
 
-/**
- * FAQ Plugin Information File
- */
 class Plugin extends PluginBase
 {
-    /**
-     * Returns information about this plugin.
-     *
-     * @return array
-     */
     public function pluginDetails()
     {
         return [
@@ -23,23 +15,13 @@ class Plugin extends PluginBase
         ];
     }
 
-    /**
-     * Register method, called when the plugin is first registered.
-     *
-     * @return void
-     */
-    public function register()
+    public function registerMarkupTags()
     {
-
-    }
-
-    /**
-     * Boot method, called right before the request route.
-     *
-     * @return array
-     */
-    public function boot()
-    {
+        return [
+            'filters' => [
+                'parseSnippets' => ['StudioAzura\FAQ\Classes\SnippetParser', 'parse'],
+            ],
+        ];
     }
 
     public function registerComponents()

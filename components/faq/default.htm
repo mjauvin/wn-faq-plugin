@@ -1,7 +1,7 @@
 <div class="faq">
   <h2 class="faq-title">{{ faq.name }}</h2>
   <div class="faq-description">
-      {{ faq.description | md }}
+      {{ faq.description | default('') | md }}
   </div>
 {% if faq.categories | length >= 1 %}
   <div class="faq-categories">

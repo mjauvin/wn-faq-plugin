@@ -11,7 +11,7 @@ class CreateFaqsTable extends Migration
         Schema::create('studioazura_faq_faqs', function (Blueprint $table) {
             $table->engine = 'InnoDB';
             $table->string('name');
-            $table->text('description');
+            $table->text('description')->nullable();
             $table->increments('id');
             $table->timestamps();
         });

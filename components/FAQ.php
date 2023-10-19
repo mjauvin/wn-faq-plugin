@@ -26,6 +26,16 @@ class FAQ extends ComponentBase
                 'type' => 'text',
                 'showExternalParam' => false,
             ],
+            'showTitle' => [
+                'type' => 'checkbox',
+                'default' => 1,
+                'showExternalParam' => false,
+            ],
+            'showDescription' => [
+                'type' => 'checkbox',
+                'default' => 1,
+                'showExternalParam' => false,
+            ],
         ];
     }
 

@@ -1,8 +1,12 @@
 <div class="faq">
+{% if __SELF__.property('showTitle') %}
   <h2 class="faq-title">{{ faq.name }}</h2>
+{% endif %}
+{% if __SELF__.property('showDescription') %}
   <div class="faq-description">
       {{ faq.description | default('') | md }}
   </div>
+{% endif %}
 {% if faq.categories | length >= 1 %}
   <div class="faq-categories">
   {% for category in faq.categories %}

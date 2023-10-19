@@ -22,3 +22,5 @@
 1.0.7:
   - add title/subtitle/excerpt columns
   - update_faqs_table.php
+1.0.8:
+  - add showTitle / showDescription component properties

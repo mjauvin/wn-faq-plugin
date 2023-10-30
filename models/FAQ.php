@@ -38,4 +38,8 @@ class FAQ extends Model
         'questions' => [Question::class, 'key' => 'faq_id', 'delete' => true, 'order' => 'sort_order'],
         'categories' => [Category::class, 'key' => 'faq_id', 'delete' => true, 'order' => 'sort_order'],
     ];
+
+    public $attachOne = [
+        'image' => \System\Models\File::class,
+    ];
 }

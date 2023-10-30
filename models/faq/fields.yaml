@@ -6,30 +6,44 @@ fields:
   name:
     label: Name
     span: left
+
   slug:
     label: Slug
     preset: name
     span: auto
+
 tabs:
   defaultTab: General
   fields:
     title:
       label: Title
       type: text
+
     subtitle:
       label: Sub Title
       type: text
+
     excerpt:
       label: Excerpt
       type: markdown
       size: small
+
     description:
       label: Description
       type: markdown
       size: huge
+
+    image:
+      label: Image
+      type: fileupload
+      imageHeight: 200
+      span: left
+
     categories:
       type: relationmanager
       tab: Categories
+
     questions@update:
       type: relationmanager
       tab: Questions
+

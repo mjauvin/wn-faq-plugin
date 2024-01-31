@@ -47,7 +47,7 @@ class FAQ extends ComponentBase
 
     public function onRender()
     {
-        #$this->page['faq'] = FAQModel::whereSlug($this->property('code'))->first();
+        $this->page['faq'] = FAQModel::whereSlug($this->property('code'))->first();
     }
 
     public static function getCodeOptions()

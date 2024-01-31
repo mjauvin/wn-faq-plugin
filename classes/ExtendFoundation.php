@@ -23,8 +23,8 @@ class ExtendFoundation
 
         Event::listen('backend.form.extendFieldsBefore', function ($formWidget) {
             if ($formWidget->model instanceof Section) {
-                $faqTab = @Yaml::parseFile( plugins_path('studioazura/faq/config/faq_tab.yaml') );
-                $formWidget->tabs['fields'] = array_merge($formWidget->tabs['fields'], $faqTab);
+                $faqField = @Yaml::parseFile( plugins_path('studioazura/faq/config/faq_fiels.yaml') );
+                $formWidget->tabs['fields'] = array_merge($formWidget->tabs['fields'], $faqField);
 
                 $formWidget->tabs['fields']['image']['trigger']['condition'] .= '[faq]';
             }

@@ -7,9 +7,6 @@ use StudioAzura\FAQ\Models\FAQ;
 use StudioAzura\Foundation\Models\Section;      
 use Yaml;
 
-
-use StudioAzura\Foundation\Models\Section;
-
 class ExtendFoundation
 {
     public static function boot()

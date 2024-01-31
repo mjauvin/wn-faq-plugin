@@ -2,6 +2,7 @@
 
 use Backend;
 use System\Classes\PluginBase;
+use System\Classes\PluginManager;
 
 class Plugin extends PluginBase
 {
@@ -13,6 +14,13 @@ class Plugin extends PluginBase
             'author'      => 'StudioAzura',
             'icon'        => 'icon-leaf'
         ];
+    }
+
+    public function boot()
+    {   
+        if (PluginManager::instance()->exists('StudioAzura.Foundation')) {
+            Classes\ExtendFoundation::boot();
+        }   
     }
 
     public function registerMarkupTags()

@@ -1,0 +1,10 @@
+faq:
+    tab: Link
+    label: FAQ
+    type: dropdown
+    options: StudioAzura\FAQ\Components\FAQ::getCodeOptions
+    span: left
+    trigger:  
+      action: show
+      field: type 
+      condition: value[faq]

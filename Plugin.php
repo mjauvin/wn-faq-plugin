@@ -25,11 +25,13 @@ class Plugin extends PluginBase
 
     public function registerMarkupTags()
     {
-        return [
-            'filters' => [
-                'parseSnippets' => ['StudioAzura\FAQ\Classes\SnippetParser', 'parse'],
-            ],
-        ];
+        if (PluginManager::instance()->exists('Winter.Pages')) {
+            return [
+                'filters' => [
+                    'parseSnippets' => ['StudioAzura\FAQ\Classes\SnippetParser', 'parse'],
+                ],
+            ];
+        }
     }
 
     public function registerComponents()

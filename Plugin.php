@@ -23,6 +23,7 @@ class Plugin extends PluginBase
         }   
     }
 
+<<<<<<< Updated upstream
     public function registerMarkupTags()
     {
         if (PluginManager::instance()->exists('Winter.Pages')) {
@@ -34,6 +35,8 @@ class Plugin extends PluginBase
         }
     }
 
+=======
+>>>>>>> Stashed changes
     public function registerComponents()
     {
         return [

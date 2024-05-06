@@ -4,11 +4,11 @@
 
 fields:
     name:
-        label: Name
+        label: 'studioazura.faq::lang.models.category.name'
         required: true
         span: auto
     image:
-        label: Image
+        label: 'studioazura.faq::lang.models.category.image'
         type: fileupload
         mode: image
         span: auto

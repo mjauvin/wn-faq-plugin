@@ -4,11 +4,11 @@
 
 fields:
   name:
-    label: Name
+    label: studioazura.faq::lang.models.faq.name
     span: left
 
   slug:
-    label: Slug
+    label: studioazura.faq::lang.models.faq.slug
     preset: name
     span: auto
 
@@ -16,32 +16,32 @@ tabs:
   defaultTab: General
   fields:
     title:
-      label: Title
+      label: studioazura.faq::lang.models.faq.title
       type: text
 
     subtitle:
-      label: Sub Title
+      label: studioazura.faq::lang.models.faq.subtitle
       type: text
 
     excerpt:
-      label: Excerpt
+      label: studioazura.faq::lang.models.faq.excerpt
       type: markdown
       size: small
 
     description:
-      label: Description
+      label: studioazura.faq::lang.models.faq.description
       type: markdown
       size: huge
 
     image:
-      label: Image
+      label: studioazura.faq::lang.models.faq.image
       type: fileupload
       imageHeight: 200
       span: left
 
     categories:
       type: relationmanager
-      tab: Categories
+      tab: studioazura.faq::lang.models.category.label_plural
 
     questions@update:
       type: relationmanager

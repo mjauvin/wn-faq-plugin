@@ -6,17 +6,25 @@ columns:
     id:
         label: 'studioazura.faq::lang.models.general.id'
         searchable: true
+
     name:
+      label: 'studioazura.faq::lang.models.faq.name'
       searchable: true
+
     slug:
+      label: 'studioazura.faq::lang.models.faq.slug'
+
     questions:
+      label: 'studioazura.faq::lang.models.question.label_plural'
       type: count
+
     created_at:
         label: 'studioazura.faq::lang.models.general.created_at'
         type: datetime
         searchable: true
         sortable: true
         invisible: true
+
     updated_at:
         label: 'studioazura.faq::lang.models.general.updated_at'
         type: datetime

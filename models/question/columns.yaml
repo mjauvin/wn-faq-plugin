@@ -8,9 +8,9 @@ columns:
     invisible: true
 
   question:
-    label: Question
+    label: 'studioazura.faq::lang.models.question.label'
     searchable: true
 
   category[name]:
-    label: Category
+    label: 'studioazura.faq::lang.models.category.label'
     type: text

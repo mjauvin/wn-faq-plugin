@@ -1,5 +1,5 @@
 categories:
-    label: Category
+    label: 'studioazura.faq::lang.models.category.label'
     manage:
         form: $/studioazura/faq/models/category/fields.yaml
         list: $/studioazura/faq/models/category/columns.yaml

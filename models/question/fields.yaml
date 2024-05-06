@@ -4,17 +4,20 @@
 
 fields:
     category:
-        label: Category
-        type: dropdown
-        emptyOption: -- select category --
-        span: left
+      label: 'studioazura.faq::lang.models.category.label'
+      type: dropdown
+      emptyOption: 'studioazura.faq::lang.models.category.empty_option'
+      span: left
+
     question:
-        label: Question
-        type: markdown
+      label: 'studioazura.faq::lang.models.question.label'
+      type: markdown
+
     answer:
-        label: Answer
-        type: markdown
+      label: 'studioazura.faq::lang.models.question.answer'
+      type: markdown
+
     image:
-      label: Image
+      label: 'studioazura.faq::lang.models.question.image'
       type: fileupload
       mode: image

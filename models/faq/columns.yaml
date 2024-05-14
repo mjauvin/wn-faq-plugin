@@ -4,8 +4,9 @@
 
 columns:
     id:
-        label: 'studioazura.faq::lang.models.general.id'
-        searchable: true
+      label: 'studioazura.faq::lang.models.general.id'
+      searchable: true
+      invisible: true
 
     name:
       label: 'studioazura.faq::lang.models.faq.name'

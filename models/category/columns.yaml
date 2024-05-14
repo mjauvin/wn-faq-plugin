@@ -6,6 +6,7 @@ columns:
     id:
         label: 'studioazura.faq::lang.models.general.id'
         searchable: true
+        invisible: true
     name:
         label: 'studioazura.faq::lang.models.category.name'
         searchable: true
@@ -14,7 +15,6 @@ columns:
         type: datetime
         searchable: true
         sortable: true
-        invisible: true
     updated_at:
         label: 'studioazura.faq::lang.models.general.updated_at'
         type: datetime

@@ -6,6 +6,12 @@ use System\Classes\PluginManager;
 
 class Plugin extends PluginBase
 {
+    use \StudioAzura\Foundation\Traits\HasAliases;
+
+    protected static $aliases = [
+        'FAQ' => 'StudioAzura\FAQ\Models\FAQ',
+    ];
+
     public function pluginDetails()
     {
         return [
@@ -18,6 +24,8 @@ class Plugin extends PluginBase
 
     public function boot()
     {   
+        static::setupAliases();
+
         if (PluginManager::instance()->exists('StudioAzura.Foundation')) {
             Classes\ExtendFoundation::boot();
         }   

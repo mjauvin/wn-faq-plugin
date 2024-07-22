@@ -1,7 +1,13 @@
 <div class="faq">
-{% if __SELF__.property('showTitle') %}
-  <h2 class="faq-title">{{ faq.name }}</h2>
-{% endif %}
+  <div class="faq-header">
+    {% if __SELF__.property('showTitle') %}
+    <h4 class="faq-title">{{ faq.title }}</h4>
+    {% endif %}
+    {% if __SELF__.property('showSubtitle') %}
+    <h6 class="faq-subtitle">{{ faq.subtitle }}</h6>
+    {% endif %}
+  </div>
+
 {% if __SELF__.property('showDescription') %}
   <div class="faq-description">
       {{ faq.description | default('') | md }}

@@ -12,6 +12,8 @@ class FAQs extends Controller
         'StudioAzura.Foundation.Behaviors.Reorder',
     ];
 
+    public $requiredPermissions = ['studioazura.faq.manage_faqs'];
+
     public function __construct()
     {
         parent::__construct();

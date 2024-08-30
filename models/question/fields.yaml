@@ -6,6 +6,7 @@ fields:
     category:
       label: 'studioazura.faq::lang.models.category.label'
       type: dropdown
+      showSearch: false
       emptyOption: 'studioazura.faq::lang.models.category.empty_option'
       span: left
 

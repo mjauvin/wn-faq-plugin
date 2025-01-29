@@ -3,6 +3,7 @@ faq:
     label: FAQ
     type: dropdown
     options: StudioAzura\FAQ\Components\FAQ::getCodeOptions
+    emptyOption: -- choose --
     span: left
     trigger:  
       action: show

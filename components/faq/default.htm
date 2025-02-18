@@ -19,23 +19,13 @@
     <details class="faq-category">
       <summary class="faq-category-name">{{ category.name }}</summary>
       <div class="faq-items">
-      {% for item in category.questions %}
-        <details class="faq-item">
-          <summary class="faq-item-question">{{ item.question }}</summary>
-          <div class="faq-item-answer">{{ item.answer | twig | md | parseSnippets }}</div>
-        </details>
-      {% endfor %}
+        {% partial "@items" items=category.questions %}
       </div>
     </details>
   {% endfor %}
   </div>
 {% else %}
-  {% for item in faq.questions %}
-    <details class="faq-item">
-      <summary class="faq-item-question">{{ item.question }}</summary>
-      <div class="faq-item-answer">{{ item.answer | twig | md | parseSnippets }}</div>
-    </details>
-  {% endfor %}
+  {% partial "@items" items=faq.questions %}
 {% endif %}
 </div>
 

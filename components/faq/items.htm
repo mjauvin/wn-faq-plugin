@@ -1,0 +1,6 @@
+{% for item in items %}
+  <details class="faq-item">
+    <summary class="faq-item-question">{{ item.question }}</summary>
+    <div class="faq-item-answer">{{ item.answer | twig | md | parseSnippets }}</div>
+  </details>
+{% endfor %}

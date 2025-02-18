@@ -24,3 +24,5 @@
   - update_faqs_table.php
 1.0.8:
   - add showTitle / showDescription component properties
+1.0.9:
+  - improve default FAQ component markdown

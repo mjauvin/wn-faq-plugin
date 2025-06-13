@@ -22,10 +22,13 @@ class Plugin extends PluginBase
         ];
     }
 
-    public function boot()
-    {   
+    public function register()
+    {
         static::setupAliases();
+    }
 
+    public function boot()
+    {
         if (PluginManager::instance()->exists('StudioAzura.Foundation')) {
             Classes\ExtendFoundation::boot();
         }   

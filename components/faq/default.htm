@@ -1,4 +1,4 @@
-<div class="faq">
+<div itemscope itemtype="https://schema.org/FAQPage" class="faq">
   <div class="faq-header">
     {% if __SELF__.property('showTitle') %}
     <h4 class="faq-title">{{ faq.title }}</h4>
@@ -28,22 +28,3 @@
   {% partial "@items" items=faq.questions %}
 {% endif %}
 </div>
-
-<script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-  {% for item in faq.questions %}
-    {
-      "@type": "Question",
-      "name": "{{ item.question }}",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "<p>{{ item.answer }}</p>"
-      }
-    }{{ loop.last ? '' : ',' }}
-  {% endfor ~%}
-  ]
-}
-</script>

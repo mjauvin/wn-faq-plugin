@@ -1,6 +1,8 @@
 {% for item in items %}
-  <details class="faq-item">
-    <summary class="faq-item-question">{{ item.question }}</summary>
-    <div class="faq-item-answer">{{ item.answer | twig | md | parseSnippets }}</div>
+  <details itemscope itemprop="mainEntity" itemtype="https://schema.org/Question" class="faq-item">
+    <summary itemprop="name" class="faq-item-question">{{ item.question }}</summary>
+    <div itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer" class="faq-item-answer">
+      <span itemprop="text">{{ item.answer | twig | md | parseSnippets }}</span>
+    </div>
   </details>
 {% endfor %}

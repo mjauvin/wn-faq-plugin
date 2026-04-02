@@ -22,6 +22,11 @@ class FAQ extends ComponentBase
                 'emptyOption' => '-- select FAQ --',
                 'showExternalParam' => false,
             ],
+            'useStyles' => [
+                'type' => 'checkbox',
+                'default' => 1,
+                'showExternalParam' => false,
+            ],
             'style' => [
                 'type' => 'text',
                 'showExternalParam' => false,
@@ -45,7 +50,9 @@ class FAQ extends ComponentBase
 
     public function onRun()
     {
-        $this->addCss(['assets/scss/faq.scss']);
+        if ($this->property('useStyles')) {
+            $this->addCss(['assets/scss/faq.scss']);
+        }
         $this->page['faq'] = FAQModel::transWhere('slug', $this->property('code'))->first();
     }
 

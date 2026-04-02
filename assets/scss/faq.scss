@@ -48,12 +48,12 @@
   font-size: 18px;
 }
 
-summary::marker {
+.faq summary::marker {
   content: '+ ';
   color: black;
 }
 
-summary::-webkit-details-marker {
+.faq summary::-webkit-details-marker {
   display: none;
 }
 

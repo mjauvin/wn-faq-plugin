@@ -10,7 +10,7 @@
 
 {% if __SELF__.property('showDescription') %}
   <div class="faq-description">
-      {{ faq.description | default('') | md }}
+      {{ faq.description | default(text_placeholder()) | md }}
   </div>
 {% endif %}
 
@@ -26,6 +26,8 @@
   {% endfor %}
   </div>
 {% else %}
-  {% partial "@items" items=faq.questions %}
+  <div class="faq-items">
+    {% partial "@items" items=faq.questions %}
+  </div>
 {% endif %}
 </div>
